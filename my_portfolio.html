@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Rohan Mehta | Full Stack Developer</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: 'Poppins', 'Segoe UI', sans-serif;
+    background: #fdf6ec;
+    color: #2d2a26;
+    display: flex;
+    min-height: 100vh;
+  }
+
+  /* Sidebar */
+  .sidebar {
+    width: 280px;
+    background: #ff6b4a;
+    color: #fff;
+    padding: 40px 28px;
+    position: fixed;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .sidebar img {
+    width: 100px; height: 100px; border-radius: 20px;
+    object-fit: cover; margin-bottom: 20px;
+    border: 3px solid #fff;
+  }
+  .sidebar h1 { font-size: 1.4rem; margin-bottom: 4px; }
+  .sidebar .role { opacity: 0.9; font-size: 0.9rem; margin-bottom: 20px; }
+  .sidebar-badge {
+    background: rgba(255,255,255,0.2);
+    padding: 6px 14px; border-radius: 20px;
+    font-size: 0.8rem; display: inline-block; margin-bottom: 30px;
+    width: fit-content;
+  }
+  .sidebar nav ul { list-style: none; }
+  .sidebar nav a {
+    color: #fff; text-decoration: none; opacity: 0.85;
+    display: block; padding: 10px 0; font-size: 0.95rem;
+    border-bottom: 1px solid rgba(255,255,255,0.15);
+  }
+  .sidebar nav a:hover { opacity: 1; }
+  .sidebar-footer {
+    margin-top: auto; display: flex; gap: 14px;
+  }
+  .sidebar-footer a {
+    color: #fff; background: rgba(255,255,255,0.2);
+    width: 36px; height: 36px; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    text-decoration: none; font-size: 0.9rem;
+  }
+
+  /* Main content */
+  main { margin-left: 280px; padding: 50px 60px; width: calc(100% - 280px); }
+  section { margin-bottom: 70px; }
+  h2.title {
+    font-size: 1.8rem; margin-bottom: 30px; color: #2d2a26;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2.title::after {
+    content: ''; flex: 1; height: 2px; background: #eadfce;
+  }
+
+  /* About */
+  .about-text { color: #5a5650; max-width: 640px; font-size: 1rem; line-height: 1.7; }
+  .highlight { color: #ff6b4a; font-weight: 600; }
+
+  /* Skills */
+  .skills-grid {
+    display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+    gap: 14px; max-width: 700px;
+  }
+  .skill-chip {
+    background: #fff; border: 1px solid #eadfce; border-radius: 12px;
+    padding: 14px; text-align: center; font-size: 0.9rem; font-weight: 500;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+  }
+
+  /* Projects */
+  .projects-list { display: flex; flex-direction: column; gap: 20px; }
+  .project-row {
+    background: #fff; border-radius: 16px; padding: 24px;
+    display: flex; gap: 20px; align-items: flex-start;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    border: 1px solid #f1e8d9;
+  }
+  .project-num {
+    font-size: 1.8rem; font-weight: 800; color: #ffd9cc;
+    min-width: 50px;
+  }
+  .project-content h3 { font-size: 1.15rem; margin-bottom: 6px; }
+  .project-content p { color: #6b675f; font-size: 0.92rem; margin-bottom: 12px; }
+  .project-tags { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 12px; }
+  .project-tags span {
+    background: #fff1ea; color: #ff6b4a; font-size: 0.75rem;
+    padding: 4px 12px; border-radius: 10px; font-weight: 500;
+  }
+  .project-link {
+    color: #ff6b4a; text-decoration: none; font-weight: 600; font-size: 0.88rem;
+  }
+  .project-link:hover { text-decoration: underline; }
+
+  /* Contact */
+  .contact-card {
+    background: #2d2a26; color: #fff; border-radius: 20px;
+    padding: 40px; display: flex; flex-wrap: wrap; gap: 30px; justify-content: space-between; align-items: center;
+  }
+  .contact-card h3 { font-size: 1.4rem; margin-bottom: 8px; }
+  .contact-card p { color: #b8b4ab; max-width: 380px; font-size: 0.92rem; }
+  .contact-details { display: flex; flex-direction: column; gap: 10px; }
+  .contact-details a { color: #ffd9cc; text-decoration: none; font-size: 0.95rem; }
+  .contact-details a:hover { color: #fff; }
+
+  footer { text-align: center; color: #a89f8f; font-size: 0.85rem; padding-bottom: 20px; }
+
+  @media (max-width: 900px) {
+    .sidebar { position: static; width: 100%; height: auto; }
+    main { margin-left: 0; width: 100%; padding: 30px; }
+    body { flex-direction: column; }
+  }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRd2-4xTI-yDTCFpR6ipbXZrvXkQ2C1YKQmP28pbbwWzvvX-v_9AEk8xh8T&s=10" alt="Profile photo">
+  <h1>Sanjana Suresh Ghorpade</h1>
+  <p class="role">Full Stack Developer</p>
+  <span class="sidebar-badge">🎓 BCA Graduate, 2027</span>
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="sidebar-footer">
+    <a href="https://github.com/Sanjana Ghorpade" target="_blank" title="GitHub">GH</a>
+    <a href="https://linkedin.com/in/Sanjana Ghorpade" target="_blank" title="LinkedIn">in</a>
+    <a href="mailto:sanjanaghorpade@gmail.com" title="Email">@</a>
+  </div>
+</aside>
+
+<main>
+
+  <section id="about">
+    <h2 class="title">About Me</h2>
+    <p class="about-text">
+      I'm a <span class="highlight">final-year BCA student</span>, graduating in 2027, with a strong
+      interest in full stack web development. Over the past three years, I've built several projects
+      spanning front-end interfaces, backend APIs, and database design. I love turning ideas into
+      working products and I'm actively looking for opportunities to start my career as a
+      <span class="highlight">Full Stack Developer</span>.
+    </p>
+  </section>
+
+  <section id="skills">
+    <h2 class="title">Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-chip">HTML5</div>
+      <div class="skill-chip">CSS3</div>
+      <div class="skill-chip">JavaScript</div>
+      <div class="skill-chip">React.js</div>
+      <div class="skill-chip">Python</div>
+      <div class="skill-chip">Flask</div>
+      <div class="skill-chip">Node.js</div>
+      <div class="skill-chip">Express.js</div>
+      <div class="skill-chip">MySQL</div>
+      <div class="skill-chip">MongoDB</div>
+      <div class="skill-chip">Git & GitHub</div>
+      <div class="skill-chip">REST APIs</div>
+    </div>
+  </section>
+
+  <section id="projects">
+    <h2 class="title">Projects</h2>
+    <div class="projects-list">
+
+      <div class="project-row">
+        <div class="project-num">01</div>
+        <div class="project-content">
+          <h3>Student Management System</h3>
+          <p>A web app to manage student records with add, update, search, and delete functionality, including role-based login for admin and staff.</p>
+          <div class="project-tags"><span>Flask</span><span>SQLite</span><span>Bootstrap</span></div>
+          <a class="project-link" href="https://github.com/rohanmehta/student-management-system" target="_blank">View Repository →</a>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-num">02</div>
+        <div class="project-content">
+          <h3>E-Commerce Web App</h3>
+          <p>A mini online store with product listings, shopping cart, and checkout flow, built as a full-stack MERN application.</p>
+          <div class="project-tags"><span>React</span><span>Node.js</span><span>MongoDB</span></div>
+          <a class="project-link" href="https://github.com/rohanmehta/ecommerce-web-app" target="_blank">View Repository →</a>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-num">03</div>
+        <div class="project-content">
+          <h3>Task Tracker App</h3>
+          <p>A to-do list application with priority tagging, due dates, and progress tracking, powered by a REST API backend.</p>
+          <div class="project-tags"><span>JavaScript</span><span>Express.js</span><span>MySQL</span></div>
+          <a class="project-link" href="https://github.com/rohanmehta/task-tracker-app" target="_blank">View Repository →</a>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-num">04</div>
+        <div class="project-content">
+          <h3>Weather Forecast App</h3>
+          <p>A responsive weather app that fetches real-time data using a public API, with city search and a 5-day forecast view.</p>
+          <div class="project-tags"><span>HTML/CSS</span><span>JavaScript</span><span>OpenWeather API</span></div>
+          <a class="project-link" href="https://github.com/rohanmehta/weather-forecast-app" target="_blank">View Repository →</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2 class="title">Contact</h2>
+    <div class="contact-card">
+      <div>
+        <h3>Let's work together</h3>
+        <p>I'm open to internship and entry-level Full Stack Developer roles. Feel free to reach out — I'd love to connect.</p>
+      </div>
+      <div class="contact-details">
+        <a href="sanjanaghorpade@gmail.com">✉ sanjanaghorpade@gmail.com</a>
+        <a href="tel:+919876543210">📞 +91 98765 43210</a>
+        <a href="https://linkedin.com/in/Sanjana Ghorpade" target="_blank">🔗 linkedin.com/in/Sanjana Ghorpade</a>
+        <a href="https://github.com/Sanjana Ghorpade" target="_blank">💻 github.com/Sanjana Ghorpade</a>
+      </div>
+    </div>
+  </section>
+
+  <footer>&copy; 2026 Rohan Mehta. All rights reserved.</footer>
+
+</main>
+
+</body>
+</html>
